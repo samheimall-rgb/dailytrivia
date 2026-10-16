@@ -1,0 +1,245 @@
+:root {
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --success: #10b981;
+    --error: #ef4444;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: var(--text-main);
+    margin-bottom: 4px;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Streak Card */
+.streak-card {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+    padding: 16px 24px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 4px 6px -1px rgba(245, 158, 11, 0.2);
+}
+
+.streak-icon {
+    font-size: 2.5rem;
+}
+
+.streak-info {
+    display: flex;
+    flex-direction: column;
+}
+
+#streak-count {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.streak-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Main Card */
+.card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+    border: 1px solid var(--border);
+}
+
+.loading {
+    text-align: center;
+    color: var(--text-muted);
+    padding: 40px 0;
+    font-size: 1.1rem;
+}
+
+.quiz-meta {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.badge {
+    background: #e0e7ff;
+    color: var(--primary);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#question-text {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.options-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.option-btn {
+    background: white;
+    border: 2px solid var(--border);
+    padding: 14px 18px;
+    border-radius: 12px;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-main);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.option-btn:hover:not(:disabled) {
+    border-color: var(--primary);
+    background: #f8fafc;
+}
+
+.option-btn.correct {
+    background: #ecfdf5 !important;
+    border-color: var(--success) !important;
+    color: #065f46 !important;
+}
+
+.option-btn.incorrect {
+    background: #fef2f2 !important;
+    border-color: var(--error) !important;
+    color: #991b1b !important;
+}
+
+.option-btn:disabled {
+    cursor: default;
+}
+
+/* Feedback & Results */
+.feedback {
+    margin-top: 24px;
+    padding: 16px;
+    border-radius: 12px;
+    background: #f8fafc;
+    border: 1px solid var(--border);
+}
+
+#feedback-text {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+.fact-reveal {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    margin-top: 24px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-align: center;
+}
+
+.btn:hover {
+    background: var(--primary-hover);
+}
+
+.completed-state {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.completed-icon {
+    font-size: 3rem;
+    margin-bottom: 12px;
+}
+
+.completed-state h2 {
+    margin-bottom: 10px;
+}
+
+.completed-state p {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.recap-box {
+    background: #f8fafc;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    text-align: left;
+}
+
+.hidden {
+    display: none !important;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+footer a {
+    color: var(--primary);
+    text-decoration: none;
+}
