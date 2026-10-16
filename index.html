@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Trivia Streak</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧠 Daily Trivia Challenge</h1>
+            <p class="subtitle">Test your knowledge, build your streak, learn something new!</p>
+        </header>
+
+        <!-- Streak Tracker -->
+        <div class="streak-card">
+            <div class="streak-icon">🔥</div>
+            <div class="streak-info">
+                <span id="streak-count">0</span>
+                <span class="streak-label">Day Streak</span>
+            </div>
+        </div>
+
+        <!-- App Main Content -->
+        <main class="card">
+            <div id="loading" class="loading">Loading today's trivia...</div>
+            
+            <div id="quiz-container" class="hidden">
+                <div class="quiz-meta">
+                    <span id="category-badge" class="badge">Category</span>
+                    <span id="difficulty-badge" class="badge">Difficulty</span>
+                </div>
+                
+                <h2 id="question-text">Question goes here...</h2>
+                
+                <div id="options-container" class="options-grid">
+                    <!-- Options injected via JS -->
+                </div>
+
+                <div id="feedback-container" class="feedback hidden">
+                    <p id="feedback-text"></p>
+                    <p id="fact-reveal" class="fact-reveal"></p>
+                </div>
+
+                <button id="next-btn" class="btn hidden">Come Back Tomorrow for a New Question!</button>
+            </div>
+
+            <div id="completed-container" class="hidden completed-state">
+                <div class="completed-icon">🎉</div>
+                <h2>You're all caught up for today!</h2>
+                <p>You've already completed today's trivia challenge. Come back tomorrow to keep your streak alive!</p>
+                <div id="recap-box" class="recap-box"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by <a href="https://opentdb.com/" target="_blank">Open Trivia Database</a></p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
